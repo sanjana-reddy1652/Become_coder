@@ -48,30 +48,3 @@ else:
 
 
 
-long long count (long long n)
-    {
-        long long cnt;
-        while (n)
-        {
-            if(n & 1)
-                cnt++;
-            n=n>>1;
-        }
-        return cnt;
-    }
-    long long solve(long long l, long long r)
-    {
-        // Code Here
-        long long temp,i,cnt;
-        for (i=l;i<=r;i++)
-        {
-           temp = count(i);
-           if(temp==3)
-           cnt++;
-        }
-        return cnt;
-    }
-    
-};
-
-
