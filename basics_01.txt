@@ -1,0 +1,77 @@
+NOTE : #include<bits/stdc++.h>
+_____________________________________
+Data types:
+	int --> long long int 
+	float --> double
+	bool 
+	char -->string
+__________________________________________
+Operators:
+	Arthmetic --> + - / * %
+	Relational --> > < >= <= != ==
+	Assignment --> = += -= *= /=
+	Logical:
+		&& -->(T T T) and 
+		|| -->(T F T) or
+	Bitwise:
+		& -->(1 1 1 , 1 0 0 , 0 1 0)
+		| -->(1 0 1 , 1 1 1 , 0 1 1)
+		^ -->(1 0 1 , 1 1 0 , 0 1 1)
+		>> --> /n
+		<< --> *n
+_______________________________________________________
+EXAMPLE 01 : SET_BITS count (c++)
+#include<iostream>                 
+using namespace std;
+int main()
+{
+	int cnt=0,num;
+	cin>>num;
+	while(num)
+	{
+		if(num&1) cnt++;
+		num = num>>1;
+	}
+	cout<<cnt;
+	return 0;
+}
+________________________________________________________________________________
+EXAMPLE 02 :Checking if a bit at a paticular position is a Setbit or no (PY)
+num=int(input())
+n=int(input())
+temp=num>>n-1
+if(temp&1):
+    print(True)
+else:
+    print(False)
+
+
+
+
+long long count (long long n)
+    {
+        long long cnt;
+        while (n)
+        {
+            if(n & 1)
+                cnt++;
+            n=n>>1;
+        }
+        return cnt;
+    }
+    long long solve(long long l, long long r)
+    {
+        // Code Here
+        long long temp,i,cnt;
+        for (i=l;i<=r;i++)
+        {
+           temp = count(i);
+           if(temp==3)
+           cnt++;
+        }
+        return cnt;
+    }
+    
+};
+
+
